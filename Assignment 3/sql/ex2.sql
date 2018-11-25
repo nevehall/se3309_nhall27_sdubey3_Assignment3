@@ -42,6 +42,7 @@ PRIMARY KEY	    (brandID)
 CREATE TABLE Product(
 productNo			INT unsigned NOT NULL,
 brandID				INT unsigned NOT NULL,
+size						VARCHAR(150),
 rent						BOOLEAN NOT NULL,
 purchase				BOOLEAN NOT NULL,
 price					DECIMAL(10,2) NOT NULL,

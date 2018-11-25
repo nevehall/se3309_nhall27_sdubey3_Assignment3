@@ -20,6 +20,7 @@ SELECT * FROM Employee;
 INSERT INTO Product
 SET productNo = 2353,
 		rent = 0,
+        size = 'S',
         purchase = 1,
         price = 78.00,
         brandID = (
