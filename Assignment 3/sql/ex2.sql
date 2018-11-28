@@ -24,13 +24,13 @@ FOREIGN KEY	 (employeeNo) REFERENCES Employee(employeeNo)
 CREATE TABLE Transactions(
 transactionID		INT unsigned NOT NULL,
 employeeNo		INT unsigned NOT NULL,
-customerEmail	VARCHAR(150) NOT NULL,
+customerEmail	VARCHAR(150),
 transTime			TIME NOT NULL,
 transDate			DATE NOT NULL,
 total 					DECIMAL(10,2) NOT NULL,
 PRIMARY KEY 	(transactionID),
 FOREIGN KEY 	(employeeNo) REFERENCES Employee(employeeNo),
-FOREIGN KEY 	(customerEmail) REFERENCES Customer(customerEmail)
+FOREIGN KEY 	(customerEmail) REFERENCES Customer(customerEmail) ON UPDATE CASCADE ON DELETE SET NULL 
 );
 
 CREATE TABLE Brand(
